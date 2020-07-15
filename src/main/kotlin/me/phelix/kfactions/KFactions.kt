@@ -1,6 +1,7 @@
 package me.phelix.kfactions
 
 import com.google.gson.reflect.TypeToken
+import me.phelix.kfactions.commands.CommandHandler
 import me.phelix.kfactions.handlers.ChunkHandler
 import me.phelix.kfactions.handlers.FactionHandler
 import me.phelix.kfactions.handlers.PlayerHandler
@@ -18,6 +19,8 @@ class KFactions : JavaPlugin() {
     val chunkHandler: ChunkHandler = ChunkHandler(this)
 
     override fun onEnable() {
+        getCommand("f")!!.setExecutor(CommandHandler(this))
+
         registerEvents()
         load()
     }
