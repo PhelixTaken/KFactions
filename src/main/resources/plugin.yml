@@ -3,3 +3,5 @@ version: 1.0.0
 name: KFactions
 author: Phelix
 commands:
+  f:
+    aliases: [faction]

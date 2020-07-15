@@ -13,9 +13,9 @@ import java.lang.reflect.Type
 
 class KFactions : JavaPlugin() {
 
-    private val playerHandler: PlayerHandler = PlayerHandler()
-    private val factionHandler: FactionHandler = FactionHandler()
-    private val chunkHandler: ChunkHandler = ChunkHandler(this)
+    val playerHandler: PlayerHandler = PlayerHandler()
+    val factionHandler: FactionHandler = FactionHandler()
+    val chunkHandler: ChunkHandler = ChunkHandler(this)
 
     override fun onEnable() {
         registerEvents()

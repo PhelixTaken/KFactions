@@ -16,4 +16,8 @@ class FPlayer(val id: String) {
 
     fun getName(): String = Bukkit.getOfflinePlayer(id).name!!
 
+    fun hasFaction(): Boolean = faction.name != "Wilderness"
+
+    fun sendMessage(message: String) = getPlayer()?.sendMessage(message)
+
 }

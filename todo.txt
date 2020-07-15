@@ -9,7 +9,7 @@
 
 [] Create a better way of loading and saving
 
-[] Add sub command abstract class
+[X] Add sub command abstract class
     [] Add command handler
 
 [] Custom events

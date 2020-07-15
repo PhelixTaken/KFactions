@@ -9,6 +9,10 @@ class Faction(val name: String) {
     val players = mutableSetOf<FPlayer>()
     val allies = mutableSetOf<String>()
     val enemies = mutableSetOf<String>()
-    val factionPermission: FactionPermission = FactionPermission()
+    lateinit var factionPermission: FactionPermission
+    var description = "Default faction description"
+    var power: Int = 0
+    var open = false
+
 
 }

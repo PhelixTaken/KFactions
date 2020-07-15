@@ -14,7 +14,6 @@ object Message {
 
 
 
-
     var show = arrayListOf(
         "&8&l&m===========================================",
         "&7Description \u00BB &6{faction_description}",
@@ -26,6 +25,9 @@ object Message {
         "&7Enemies \u00BB &6{faction_enemies}",
         "&8&l&m==========================================="
     )
+    fun test() {
+        show.add("Sd")
+    }
 
 
     fun save(persist: Persist, file: File) = persist.save(false, instance, file)
@@ -33,18 +35,3 @@ object Message {
     fun load(persist: Persist, file: File) = persist.load(Message::class.java, file)
 
 }
-
-/*
-
-add("&8&l&m===========================================");
-        add("&7Tag \u00BB &6{faction_name}");
-        add("&7Description \u00BB &6{faction_description}");
-        add("&7Leader \u00BB &6{faction_leader}");
-        add("&7Members \u00BB &6{faction_members}");
-        add("&7Claims \u00BB &6{faction_claims}&7/&6{faction_totalclaims}");
-        add("&7Power \u00BB &6{faction_powerleft}&7/&6{faction_totalpower}");
-        add("&7Allies \u00BB &6{faction_allies}");
-        add("&7Enemies \u00BB &6{faction_enemies}");
-        add("&8&l&m===========================================");
-
- */
