@@ -5,12 +5,12 @@
 
 [] Test saving and loading
 
-[] Add player to player map if it doesn't exist
+[x] Add player to player map if it doesn't exist
 
 [] Create a better way of loading and saving
 
-[X] Add sub command abstract class
-    [] Add command handler
+[x] Add sub command abstract class
+    [x] Add command handler
 
 [] Custom events
     [] Custom chunk change event that gets the faction ur entering

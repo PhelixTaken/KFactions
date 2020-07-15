@@ -2,12 +2,14 @@ package me.phelix.kfactions
 
 import com.google.gson.reflect.TypeToken
 import me.phelix.kfactions.commands.CommandHandler
+import me.phelix.kfactions.events.JoinEvent
 import me.phelix.kfactions.handlers.ChunkHandler
 import me.phelix.kfactions.handlers.FactionHandler
 import me.phelix.kfactions.handlers.PlayerHandler
 import me.phelix.kfactions.utils.FLocation
 import me.phelix.kfactions.utils.Message
 import net.prosavage.baseplugin.serializer.Persist
+import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 import java.lang.reflect.Type
@@ -30,7 +32,7 @@ class KFactions : JavaPlugin() {
     }
 
     private fun registerEvents() {
-
+        Bukkit.getPluginManager().registerEvents(JoinEvent(this), this)
     }
 
     private fun load() {
