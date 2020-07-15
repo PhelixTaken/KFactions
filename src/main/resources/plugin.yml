@@ -1,0 +1,5 @@
+main: me.phelix.kfactions.KFactions
+version: 1.0.0
+name: KFactions
+author: Phelix
+commands:

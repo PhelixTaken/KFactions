@@ -1,0 +1,49 @@
+[x] Add #equals and #hashCode to FLocation
+
+[] Chunk Handler
+    [] Add methods to get faction from chunk and get location from faction
+
+[] Add sub command abstract class
+    [] Add command handler
+
+[] Custom events
+    [] Custom chunk change event that gets the faction ur entering
+    [] Faction join event
+    [] Faction leave event
+
+[x] Hardcoded Roles
+
+[] Permissions per faction
+
+[x] Custom messages setting up
+
+[] Commands
+    [] Faction create
+    [] Information
+    [] Description
+    [] Default role on join
+    [] Invite
+    [] Kick
+    [] Ban
+    [] Join
+    [] Disband
+    [] Claim
+    [] Unclaim
+    [] Claim all
+    [] Unclaim all
+    [] Set warp
+    [] Delete warp
+    [] Warp
+    [] Warp list
+    [] Set home
+    [] Warp home
+    [] Ally
+    [] Remove ally
+    [] Enemy
+    [] Remove enemy
+    [] Map
+    [] Permissions
+    [] Promote
+    [] Demote
+    [] Different chat
+    [] TNT vault
