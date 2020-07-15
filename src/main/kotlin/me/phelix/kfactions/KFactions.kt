@@ -6,6 +6,7 @@ import me.phelix.kfactions.events.JoinEvent
 import me.phelix.kfactions.handlers.ChunkHandler
 import me.phelix.kfactions.handlers.FactionHandler
 import me.phelix.kfactions.handlers.PlayerHandler
+import me.phelix.kfactions.utils.Config
 import me.phelix.kfactions.utils.FLocation
 import me.phelix.kfactions.utils.Message
 import net.prosavage.baseplugin.serializer.Persist
@@ -39,10 +40,14 @@ class KFactions : JavaPlugin() {
         val factions = File("$dataFolder${File.separator}KFactions", "players.json")
         val world = File("$dataFolder${File.separator}KFactions", "world.json")
         val message = File("$dataFolder${File.separator}KFactions", "messages.json")
+        val config = File("$dataFolder${File.separator}KFactions", "config.json")
         val persist = Persist(dataFolder, logger)
 
         if (message.exists())
             Message.load(persist, message)
+
+        if(config.exists())
+            Config.load(persist, config)
 
         if (world.exists()) {
             val type: Type = object : TypeToken<HashMap<FLocation, String>>() {}.type
@@ -73,11 +78,13 @@ class KFactions : JavaPlugin() {
         val factions = File("$dataFolder${File.separator}KFactions", "players.json")
         val world = File("$dataFolder${File.separator}KFactions", "world.json")
         val message = File("$dataFolder${File.separator}KFactions", "messages.json")
+        val config = File("$dataFolder${File.separator}KFactions", "config.json")
         val persist = Persist(dataFolder, logger)
         factions.parentFile.mkdirs()
         factions.createNewFile()
         world.createNewFile()
         Message.save(persist, message)
+        Config.save(persist, config)
         persist.save(false, playerHandler.map, factions)
         persist.save(false, chunkHandler.map, world)
     }

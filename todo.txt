@@ -1,27 +1,29 @@
 [x] Add #equals and #hashCode to FLocation
 
-[] Chunk Handler
-    [] Add methods to get faction from chunk and get location from faction
-
-[] Test saving and loading
-
-[x] Add player to player map if it doesn't exist
-
-[] Create a better way of loading and saving
-
-[x] Add sub command abstract class
-    [x] Add command handler
-
-[] Custom events
-    [] Custom chunk change event that gets the faction ur entering
-    [] Faction join event
-    [] Faction leave event
+[x] Chunk Handler
+    [x] Add methods to get faction from chunk and get location from faction
 
 [x] Hardcoded Roles
 
 [x] Permissions per faction
 
 [x] Custom messages setting up
+
+[x] Add player to player map if it doesn't exist
+
+[x] Add sub command abstract class
+    [x] Add command handler
+
+[] Test saving and loading
+
+[] Create a better way of loading and saving
+
+[] Add a config file/class
+
+[] Custom events
+    [] Custom chunk change event that gets the faction ur entering
+    [] Faction join event
+    [] Faction leave event
 
 [] Commands
     [] Faction create

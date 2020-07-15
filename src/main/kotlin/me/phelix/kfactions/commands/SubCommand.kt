@@ -28,7 +28,7 @@ abstract class SubCommand(
     }
 
     fun sendMessage(fme: FPlayer, message: String) = fme.sendMessage(color("${Message.prefix} $message"))
-    fun sendMessage(fme: FPlayer, message: String, vararg objects: Objects) = fme.sendMessage(String.format(color("${Message.prefix} $message"), objects))
+    fun sendMessage(fme: FPlayer, message: String, vararg objects: Any?) = fme.sendMessage(String.format(color("${Message.prefix} $message"), objects))
 
     fun color(message: String): String = ChatColor.translateAlternateColorCodes('&', message)
 

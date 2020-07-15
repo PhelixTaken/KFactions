@@ -12,6 +12,11 @@ object Message {
 
     var factionNeeded = "&7You must be in a faction to do that!"
 
+    var alreadyInFaction = "&7You are already in a faction!"
+
+    var factionNameLength = "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s&7!"
+    var factionCreated = "&7You have successfully created the faction &6%s&7!"
+
 
 
     var show = arrayListOf(
@@ -25,10 +30,6 @@ object Message {
         "&7Enemies \u00BB &6{faction_enemies}",
         "&8&l&m==========================================="
     )
-    fun test() {
-        show.add("Sd")
-    }
-
 
     fun save(persist: Persist, file: File) = persist.save(false, instance, file)
 

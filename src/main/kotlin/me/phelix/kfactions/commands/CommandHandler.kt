@@ -9,7 +9,7 @@ import org.bukkit.entity.Player
 
 class CommandHandler(private val plugin: KFactions) : CommandExecutor {
 
-    private val commands = mutableSetOf<SubCommand>()
+    private val commands = mutableSetOf(CmdCreate())
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
 

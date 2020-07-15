@@ -2,7 +2,6 @@ package me.phelix.kfactions.handlers
 
 import me.phelix.kfactions.Faction
 import me.phelix.kfactions.KFactions
-import me.phelix.kfactions.test
 import me.phelix.kfactions.utils.FLocation
 import org.bukkit.Chunk
 import org.bukkit.Location
