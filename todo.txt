@@ -3,6 +3,12 @@
 [] Chunk Handler
     [] Add methods to get faction from chunk and get location from faction
 
+[] Test saving and loading
+
+[] Add player to player map if it doesn't exist
+
+[] Create a better way of loading and saving
+
 [] Add sub command abstract class
     [] Add command handler
 
@@ -13,7 +19,7 @@
 
 [x] Hardcoded Roles
 
-[] Permissions per faction
+[x] Permissions per faction
 
 [x] Custom messages setting up
 
