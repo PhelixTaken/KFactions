@@ -23,6 +23,14 @@ class CmdCreate : SubCommand(arrayOf("create"), "<name>", "Create a faction", fa
                     Config.factionNameMaxLength
                 )!!
 
+            if(it.args[0].equals("Wilderness", ignoreCase = true) || it.args[0].equals("Safezone", ignoreCase = true) || it.args[0].equals("Warzone", ignoreCase = true))
+                return@let it.fme.sendMessage(
+                    Message.invalidFactionName,
+                    "Wilderness",
+                    "Safezone",
+                    "Warzone"
+                )
+
             it.factionHandler.getWilderness().players.remove(it.fme)
             val faction = Faction(it.args[0])
             it.factionHandler.map[it.args[0]] = faction

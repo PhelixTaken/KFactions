@@ -7,6 +7,11 @@
   "factionCreated": "&7You have successfully created the faction &6%s&7!",
   "playerNotExist": "&6%s &7does not exist!",
   "descriptionChanged": "&7Changed faction's description to &6%s&7!",
+  "invalidFactionName": "&7Faction name can't be &6%s&7, &6%s &7or &6%s&7!",
+  "playerAlreadyInSameFaction": "&6%s &7is already in the same faction as you!",
+  "playerIsAlreadyInFaction": "&6%s &7is already in a faction!",
+  "playerInvited": "&7You have invited &6%s &7to the faction!",
+  "playerNotificationInvited": "&7You have been invited by &6%s &7to &6%s&7! (( Click here ))",
   "show": [
     "&8&l&m===========================================",
     "&7Name » &6{faction_name}",

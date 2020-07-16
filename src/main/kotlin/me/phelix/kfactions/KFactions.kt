@@ -54,10 +54,10 @@ class KFactions : JavaPlugin() {
             chunkHandler.map = persist.load(type, world) ?: mutableMapOf()
         }
 
-        if (!factionHandler.map.containsKey("Wilderness")) {
-            val wilderness = Faction("Wilderness")
-            factionHandler.map[wilderness.name] = wilderness
-        }
+        factionHandler.map["Wilderness"] = Faction("Wilderness")
+        factionHandler.map["Safezone"] = Faction("Safezone")
+        factionHandler.map["Warzone"] = Faction("Warzone")
+
 
         if (factions.exists()) {
             val type: Type = object : TypeToken<HashMap<String, Faction>>() {}.type
@@ -66,6 +66,7 @@ class KFactions : JavaPlugin() {
             factionHandler.map.forEach { (_, faction) ->
 
                 faction.claims = mutableSetOf()
+                faction.invites = mutableSetOf()
 
                 faction.players.forEach {
                     playerHandler.map[it.id] = it

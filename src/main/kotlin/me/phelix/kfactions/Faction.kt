@@ -12,6 +12,8 @@ class Faction(val name: String) {
     val players = mutableSetOf<FPlayer>()
     val allies = mutableSetOf<String>()
     val enemies = mutableSetOf<String>()
+    @Transient
+    var invites = mutableSetOf<FPlayer>()
     lateinit var factionPermission: FactionPermission
     var description = "Default faction description"
     var open = false

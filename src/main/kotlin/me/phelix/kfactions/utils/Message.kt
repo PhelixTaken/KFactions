@@ -21,6 +21,14 @@ object Message {
 
     var descriptionChanged = "&7Changed faction's description to &6%s&7!"
 
+    var invalidFactionName = "&7Faction name can't be &6%s&7, &6%s &7or &6%s&7!"
+
+    var playerAlreadyInSameFaction = "&6%s &7is already in the same faction as you!"
+    var playerIsAlreadyInFaction = "&6%s &7is already in a faction!"
+
+    var playerInvited = "&7You have invited &6%s &7to the faction!"
+    var playerNotificationInvited = "&7You have been invited by &6%s &7to &6%s&7! &o(( Click here ))"
+
 
 
     var show = arrayListOf(
