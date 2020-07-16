@@ -6,7 +6,7 @@ import org.bukkit.entity.Player
 
 class PlayerHandler {
 
-    lateinit var map: MutableMap<String, FPlayer>
+    var map: MutableMap<String, FPlayer> = mutableMapOf()
 
     fun getPlayer(player: Player): FPlayer? = map[player.uniqueId.toString()]
 

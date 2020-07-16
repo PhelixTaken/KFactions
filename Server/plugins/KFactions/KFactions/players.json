@@ -1,1 +1,17 @@
-{}
+{
+  "Wilderness": {
+    "players": [
+      {
+        "role": "RECRUIT",
+        "id": "68cae455-33f6-4e43-a928-8969e9a838bf"
+      }
+    ],
+    "allies": [],
+    "enemies": [],
+    "description": "Default faction description",
+    "power": 0,
+    "open": false,
+    "defaultRole": "RECRUIT",
+    "name": "Wilderness"
+  }
+}

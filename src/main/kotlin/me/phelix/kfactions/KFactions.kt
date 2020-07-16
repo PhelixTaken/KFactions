@@ -24,8 +24,8 @@ class KFactions : JavaPlugin() {
     override fun onEnable() {
         getCommand("f")!!.setExecutor(CommandHandler(this))
 
-        registerEvents()
         load()
+        registerEvents()
     }
 
     override fun onDisable() {
@@ -46,7 +46,7 @@ class KFactions : JavaPlugin() {
         if (message.exists())
             Message.load(persist, message)
 
-        if(config.exists())
+        if (config.exists())
             Config.load(persist, config)
 
         if (world.exists()) {
@@ -54,9 +54,15 @@ class KFactions : JavaPlugin() {
             chunkHandler.map = persist.load(type, world) ?: mutableMapOf()
         }
 
+        if (!factionHandler.map.containsKey("Wilderness")) {
+            val wilderness = Faction("Wilderness")
+            factionHandler.map[wilderness.name] = wilderness
+        }
+
         if (factions.exists()) {
             val type: Type = object : TypeToken<HashMap<String, Faction>>() {}.type
             factionHandler.map = persist.load(type, factions) ?: mutableMapOf()
+
             factionHandler.map.forEach { (_, faction) ->
 
                 faction.players.forEach {
@@ -69,8 +75,8 @@ class KFactions : JavaPlugin() {
                 val faction = factionHandler.getFaction(chunkHandler.map[it]!!)
                 faction!!.claims.add(it)
             }
-
         }
+
 
     }
 
@@ -85,7 +91,7 @@ class KFactions : JavaPlugin() {
         world.createNewFile()
         Message.save(persist, message)
         Config.save(persist, config)
-        persist.save(false, playerHandler.map, factions)
+        persist.save(false, factionHandler.map, factions)
         persist.save(false, chunkHandler.map, world)
     }
 

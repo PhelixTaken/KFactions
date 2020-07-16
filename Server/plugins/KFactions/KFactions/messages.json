@@ -1,3 +1,19 @@
 {
-  "nice": "tesodfdft"
+  "prefix": "&7[&6!&7]",
+  "commandMapPrefix": "&m&l&8=======================< &r&6Map &r&m&l&8>=======================",
+  "factionNeeded": "&7You must be in a faction to do that!",
+  "alreadyInFaction": "&7You are already in a faction!",
+  "factionNameLength": "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s&7!",
+  "factionCreated": "&7You have successfully created the faction &6%s&7!",
+  "show": [
+    "&8&l&m===========================================",
+    "&7Description ? &6{faction_description}",
+    "&7Leader ? &6{faction_leader}",
+    "&7Members ? &6{faction_members}",
+    "&7Claims ? &6{faction_claims}&7/&6{faction_totalclaims}",
+    "&7Power ? &6{faction_powerleft}&7/&6{faction_totalpower}",
+    "&7Allies ? &6{faction_allies}",
+    "&7Enemies ? &6{faction_enemies}",
+    "&8&l&m==========================================="
+  ]
 }

@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "uuid": "68cae455-33f6-4e43-a928-8969e9a838bf",
+    "name": "MythicalPhelix",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]

@@ -12,12 +12,12 @@ class CmdCreate : SubCommand(arrayOf("create"), "<name>", "Create a faction", fa
     override fun execute(commandContext: CommandContext) {
         commandContext.let {
 
-            if (it.args.size != 1) return@let sendMessage(it.fme, toString())!!
+            if (it.args.size != 1) return@let it.fme.sendMessage(it.fme, toString())!!
 
-            if (it.fme.hasFaction()) return@let sendMessage(it.fme, Message.alreadyInFaction)!!
+            if (it.fme.hasFaction()) return@let it.fme.sendMessage(it.fme, Message.alreadyInFaction)!!
 
             if (it.args[0].length < Config.factionNameMinLength || it.args[0].length > Config.factionNameMaxLength)
-                return@let sendMessage(
+                return@let it.fme.sendMessage(
                     it.fme,
                     Message.factionNameLength,
                     Config.factionNameMinLength,
@@ -33,7 +33,7 @@ class CmdCreate : SubCommand(arrayOf("create"), "<name>", "Create a faction", fa
             faction.factionPermission = FactionPermission()
             faction.factionPermission.setDefaultPermissions()
             faction.players.add(it.fme)
-            sendMessage(it.fme, Message.factionCreated, it.args[0])
+            it.fme.sendMessage(it.fme, Message.factionCreated, it.args[0])!!
         }
     }
 

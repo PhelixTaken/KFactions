@@ -21,6 +21,7 @@ class JoinEvent(private val plugin: KFactions) : Listener {
             fme.faction = plugin.factionHandler.getWilderness()
             fme.role = Role.RECRUIT
         }
+        println(plugin.factionHandler.map.toString())
     }
 
 }

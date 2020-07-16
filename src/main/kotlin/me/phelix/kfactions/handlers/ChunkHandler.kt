@@ -9,7 +9,7 @@ import org.bukkit.Location
 
 class ChunkHandler(val main: KFactions) {
 
-    lateinit var map: MutableMap<FLocation, String>
+    var map: MutableMap<FLocation, String> = mutableMapOf()
 
     fun isClaimed(fLocation: FLocation): Boolean = map.containsKey(fLocation)
     fun isClaimed(location: Location): Boolean = isClaimed(FLocation(location))

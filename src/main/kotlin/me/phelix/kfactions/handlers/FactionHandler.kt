@@ -4,7 +4,7 @@ import me.phelix.kfactions.Faction
 
 class FactionHandler {
 
-    lateinit var map: MutableMap<String, Faction>
+    var map: MutableMap<String, Faction> = mutableMapOf()
 
     fun getFaction(name: String): Faction? = map[name]
 

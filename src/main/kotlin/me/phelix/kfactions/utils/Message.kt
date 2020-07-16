@@ -14,7 +14,7 @@ object Message {
 
     var alreadyInFaction = "&7You are already in a faction!"
 
-    var factionNameLength = "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s&7!"
+    var factionNameLength = "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s &7characters!"
     var factionCreated = "&7You have successfully created the faction &6%s&7!"
 
 

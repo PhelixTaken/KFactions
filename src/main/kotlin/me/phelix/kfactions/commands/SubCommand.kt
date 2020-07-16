@@ -1,10 +1,7 @@
 package me.phelix.kfactions.commands
 
 import me.phelix.kfactions.FPlayer
-import me.phelix.kfactions.utils.Message
 import me.phelix.kfactions.utils.permissions.Permission
-import org.bukkit.ChatColor
-import java.util.*
 
 abstract class SubCommand(
     val aliases: Array<out String>,
@@ -26,11 +23,6 @@ abstract class SubCommand(
 
         return true
     }
-
-    fun sendMessage(fme: FPlayer, message: String) = fme.sendMessage(color("${Message.prefix} $message"))
-    fun sendMessage(fme: FPlayer, message: String, vararg objects: Any?) = fme.sendMessage(String.format(color("${Message.prefix} $message"), objects))
-
-    fun color(message: String): String = ChatColor.translateAlternateColorCodes('&', message)
 
     override fun toString(): String = String.format("/f %s %s", aliases.joinToString(" | "), usage);
 
