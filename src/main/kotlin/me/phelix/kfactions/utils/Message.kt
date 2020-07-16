@@ -19,6 +19,8 @@ object Message {
 
     var playerNotExist = "&6%s &7does not exist!"
 
+    var descriptionChanged = "&7Changed faction's description to &6%s&7!"
+
 
 
     var show = arrayListOf(

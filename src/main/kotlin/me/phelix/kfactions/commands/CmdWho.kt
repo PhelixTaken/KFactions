@@ -5,7 +5,7 @@ import me.phelix.kfactions.colorize
 import me.phelix.kfactions.utils.Config
 import me.phelix.kfactions.utils.Message
 
-class CmdWho : SubCommand(arrayOf("who", "show"), "[faction]", "Shows the faction information", true) {
+class CmdWho : SubCommand(arrayOf("who", "show"), "[faction]", "Shows the faction information", false) {
 
     override fun execute(commandContext: CommandContext) {
         commandContext.let {

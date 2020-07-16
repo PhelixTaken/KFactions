@@ -20,6 +20,13 @@
 
 [] Create a better way of loading and saving
 
+[] Pagination
+
+[] Events
+    [] Block breaking only in own faction or ally
+    [] No faction players hitting damage
+    [] Faction/Ally/Public chat
+
 [] Custom events
     [] Custom chunk change event that gets the faction ur entering
     [] Faction join event
@@ -27,8 +34,8 @@
 
 [] Commands
     [x] Faction create
-    [] Information
-    [] Description
+    [x] Information
+    [x] Description
     [] Default role on join
     [] Invite
     [] Kick

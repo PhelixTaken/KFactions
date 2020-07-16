@@ -1,15 +1,112 @@
 {
-  "Wilderness": {
+  "test": {
     "players": [
       {
-        "role": "RECRUIT",
+        "role": "LEADER",
         "id": "68cae455-33f6-4e43-a928-8969e9a838bf"
       }
     ],
     "allies": [],
     "enemies": [],
+    "factionPermission": {
+      "map": {
+        "RECRUIT": [
+          "NONE",
+          "CHAT"
+        ],
+        "MEMBER": [
+          "BREAKING",
+          "NONE",
+          "PLACING",
+          "WARP_LIST",
+          "UNCLAIMING",
+          "WARP",
+          "HOME",
+          "CLAIMING",
+          "CHAT"
+        ],
+        "MODERATOR": [
+          "BREAKING",
+          "NONE",
+          "PLACING",
+          "KICK",
+          "WARP_LIST",
+          "UNCLAIMING",
+          "WARP",
+          "HOME",
+          "INVITING",
+          "CLAIMING",
+          "CHAT"
+        ],
+        "COLEADER": [
+          "REMOVE_ENEMY",
+          "DELETE_WARP",
+          "WARP_LIST",
+          "REMOVE_ALLY",
+          "SET_OPEN",
+          "UNCLAIMING_ALL",
+          "NONE",
+          "PLACING",
+          "KICK",
+          "INVITING",
+          "CHAT",
+          "SET_HOME",
+          "PROMOTE",
+          "BREAKING",
+          "ADD_ALLY",
+          "SET_DESCRIPTION",
+          "SET_WARP",
+          "WARP",
+          "UNBAN",
+          "CLAIMING",
+          "ENEMY",
+          "UNCLAIMING",
+          "HOME",
+          "DEMOTE",
+          "BAN"
+        ],
+        "LEADER": [
+          "REMOVE_ENEMY",
+          "DELETE_WARP",
+          "DEFAULT_ROLE",
+          "WARP_LIST",
+          "REMOVE_ALLY",
+          "SET_OPEN",
+          "UNCLAIMING_ALL",
+          "NONE",
+          "PERMS",
+          "PLACING",
+          "KICK",
+          "INVITING",
+          "CHAT",
+          "SET_HOME",
+          "PROMOTE",
+          "BREAKING",
+          "ADD_ALLY",
+          "SET_DESCRIPTION",
+          "SET_WARP",
+          "WARP",
+          "UNBAN",
+          "CLAIMING",
+          "DISBAND",
+          "ENEMY",
+          "UNCLAIMING",
+          "HOME",
+          "DEMOTE",
+          "BAN"
+        ]
+      }
+    },
+    "description": "test is cool ",
+    "open": false,
+    "defaultRole": "RECRUIT",
+    "name": "test"
+  },
+  "Wilderness": {
+    "players": [],
+    "allies": [],
+    "enemies": [],
     "description": "Default faction description",
-    "power": 0,
     "open": false,
     "defaultRole": "RECRUIT",
     "name": "Wilderness"
