@@ -14,11 +14,11 @@
 [x] Add sub command abstract class
     [x] Add command handler
 
+[x] Add a config file/class
+
 [] Test saving and loading
 
 [] Create a better way of loading and saving
-
-[] Add a config file/class
 
 [] Custom events
     [] Custom chunk change event that gets the faction ur entering
@@ -26,7 +26,7 @@
     [] Faction leave event
 
 [] Commands
-    [] Faction create
+    [x] Faction create
     [] Information
     [] Description
     [] Default role on join

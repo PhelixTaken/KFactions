@@ -16,14 +16,13 @@ class FPlayer(val id: String) {
 
     fun getPlayer(): Player? = Bukkit.getPlayer(UUID.fromString(id))
 
-    fun getName(): String = Bukkit.getOfflinePlayer(id).name!!
+    fun getName(): String = Bukkit.getOfflinePlayer(UUID.fromString(id)).name!!
 
     fun hasFaction(): Boolean = faction.name != "Wilderness"
 
-    fun sendMessage(message: String) = getPlayer()?.sendMessage(message)
-
-    fun sendMessage(fme: FPlayer, message: String) = fme.sendMessage("${Message.prefix} $message".colorize())
-    fun sendMessage(fme: FPlayer, message: String, vararg objects: Any) = fme.sendMessage("${Message.prefix} $message".colorize().format(*objects))
+    fun sendDefaultMessage(message: String) = getPlayer()?.sendMessage(message)
+    fun sendMessage(message: String) = sendDefaultMessage("${Message.prefix} $message".colorize())
+    fun sendMessage(message: String, vararg objects: Any) = sendDefaultMessage("${Message.prefix} $message".colorize().format(*objects))
 
 }
 

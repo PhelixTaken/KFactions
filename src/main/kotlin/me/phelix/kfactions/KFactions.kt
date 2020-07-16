@@ -65,6 +65,8 @@ class KFactions : JavaPlugin() {
 
             factionHandler.map.forEach { (_, faction) ->
 
+                faction.claims = mutableSetOf()
+
                 faction.players.forEach {
                     playerHandler.map[it.id] = it
                     it.faction = faction

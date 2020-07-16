@@ -22,6 +22,12 @@ class FactionPermission {
         val coleader = COLEADER
         val leader = LEADER
 
+        map[recruit] = HashSet()
+        map[member] = HashSet()
+        map[moderator] = HashSet()
+        map[coleader] = HashSet()
+        map[leader] = HashSet()
+
         Permission.values().forEach {
 
             when (it) {

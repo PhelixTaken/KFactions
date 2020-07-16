@@ -17,10 +17,13 @@ object Message {
     var factionNameLength = "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s &7characters!"
     var factionCreated = "&7You have successfully created the faction &6%s&7!"
 
+    var playerNotExist = "&6%s &7does not exist!"
+
 
 
     var show = arrayListOf(
         "&8&l&m===========================================",
+        "&7Name \u00BB &6{faction_name}",
         "&7Description \u00BB &6{faction_description}",
         "&7Leader \u00BB &6{faction_leader}",
         "&7Members \u00BB &6{faction_members}",

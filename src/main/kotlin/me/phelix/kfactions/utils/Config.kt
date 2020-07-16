@@ -11,6 +11,7 @@ object Config {
     var factionNameMaxLength = 16
 
     var factionPowerPerPlayer = 10
+    var factionClaimPower = 1
 
     fun save(persist: Persist, file: File) = persist.save(false, instance, file)
 
