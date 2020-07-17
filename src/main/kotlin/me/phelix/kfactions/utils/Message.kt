@@ -29,6 +29,9 @@ object Message {
     var playerInvited = "&7You have invited &6%s &7to the faction!"
     var playerNotificationInvited = "&7You have been invited by &6%s &7to &6%s&7! &o(( Click here ))"
 
+    var roleDoesNotExist = "&7The role &6%s &7does not exist!"
+    var defaultRoleSet = "&7You have set the default faction role to &6%s&7!"
+
 
 
     var show = arrayListOf(

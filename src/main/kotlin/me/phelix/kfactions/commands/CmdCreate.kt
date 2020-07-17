@@ -6,6 +6,7 @@ import me.phelix.kfactions.utils.Message
 import me.phelix.kfactions.utils.Role
 import me.phelix.kfactions.utils.permissions.FactionPermission
 import java.util.*
+import kotlin.system.exitProcess
 
 class CmdCreate : SubCommand(arrayOf("create"), "<name>", "Create a faction", false) {
 

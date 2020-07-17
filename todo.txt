@@ -26,6 +26,9 @@
     [] Block breaking only in own faction or ally
     [] No faction players hitting damage
     [] Faction/Ally/Public chat
+    [] Default faction role on faction join
+
+
 
 [] Custom events
     [] Custom chunk change event that gets the faction ur entering
@@ -36,11 +39,11 @@
     [x] Faction create
     [x] Information
     [x] Description
-    [] Default role on join
-    [] Invite
+    [x] Default role
+    [x] Invite
+    [] Join
     [] Kick
     [] Ban
-    [] Join
     [] Disband
     [] Claim
     [] Unclaim

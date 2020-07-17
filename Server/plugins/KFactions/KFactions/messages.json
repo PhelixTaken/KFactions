@@ -12,6 +12,8 @@
   "playerIsAlreadyInFaction": "&6%s &7is already in a faction!",
   "playerInvited": "&7You have invited &6%s &7to the faction!",
   "playerNotificationInvited": "&7You have been invited by &6%s &7to &6%s&7! (( Click here ))",
+  "roleDoesNotExist": "&7The role &6%s &7does not exist!",
+  "defaultRoleSet": "&7You have set the default faction role to &6%s&7!",
   "show": [
     "&8&l&m===========================================",
     "&7Name » &6{faction_name}",

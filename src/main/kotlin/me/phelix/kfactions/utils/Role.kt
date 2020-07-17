@@ -1,13 +1,13 @@
 package me.phelix.kfactions.utils
 
-enum class Role(val value: Int) {
+enum class Role(val value: Int, val prefix: String) {
 
-    LEADER(5),
-    COLEADER(4),
-    MODERATOR(3),
-    MEMBER(2),
-    RECRUIT(1),
-    NONE(0);
+    LEADER(5, "Leader"),
+    COLEADER(4, "Co-Leader"),
+    MODERATOR(3, "Moderator"),
+    MEMBER(2, "Member"),
+    RECRUIT(1, "Recruit"),
+    NONE(0, "None");
 
     fun getByValue(value: Int): Role {
         when(value) {
