@@ -17,7 +17,8 @@ object Message {
     var factionNameLength = "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s &7characters!"
     var factionCreated = "&7You have successfully created the faction &6%s&7!"
 
-    var playerNotExist = "&6%s &7does not exist!"
+    var playerNotExist = "&7The player &6%s &7does not exist!"
+    var factionNotExist = "&7The faction &6%s &7does not exist!"
 
     var descriptionChanged = "&7Changed faction's description to &6%s&7!"
 
@@ -32,7 +33,9 @@ object Message {
     var roleDoesNotExist = "&7The role &6%s &7does not exist!"
     var defaultRoleSet = "&7You have set the default faction role to &6%s&7!"
 
-
+    var factionClosedNotInvited = "&7The faction &6%s &7is closed and you are not invited!"
+    var factionJoined = "&7You have joined &6%s&7!"
+    var factionJoinBroadcast = "&6%s &7has joined the faction!"
 
     var show = arrayListOf(
         "&8&l&m===========================================",
