@@ -49,6 +49,12 @@ object Message {
     var targetBan = "&7You have been banned from the faction by &6%s&7!"
     var broadcastBan = "&6%s &7has been banned from the faction by &6%s&7!"
 
+    var disbandConfirmMessage = "&7Please confirm disbanding by doing &6/disband confirm&7! ( Cannot be undone! )"
+    var disbandAlreadyConfirm = "&7Please confirm disbanding by doing &6/disband confirm&7!"
+    var disbandNotConfirmed = "&7Please run &6/disband &7first!"
+    var disbandSuccessfully = "&7You have disbanded &6%s&7!"
+    var disbandBroadcast = "&6%s &7has been disbanded by &6%s&7!"
+
     var show = arrayListOf(
         "&8&l&m===========================================",
         "&7Name \u00BB &6{faction_name}",

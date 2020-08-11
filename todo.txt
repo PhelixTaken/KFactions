@@ -43,7 +43,7 @@
     [x] Invite
     [x] Join
     [x] Kick
-    [] Ban
+    [x] Ban
     [] Disband
     [] Claim
     [] Unclaim
