@@ -12,6 +12,7 @@ class Faction(val name: String) {
     val players = mutableSetOf<FPlayer>()
     val allies = mutableSetOf<String>()
     val enemies = mutableSetOf<String>()
+    val bans = mutableSetOf<String>()
 
     @Transient
     var invites = mutableSetOf<FPlayer>()
@@ -28,7 +29,6 @@ class Faction(val name: String) {
     }
 
     fun removePlayer(player: FPlayer) = players.remove(player)
-
 
     fun getLeader(): FPlayer = players.stream().filter { fPlayer -> fPlayer.role == Role.LEADER }.findFirst().get()
 

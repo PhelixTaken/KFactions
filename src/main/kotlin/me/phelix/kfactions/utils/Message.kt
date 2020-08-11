@@ -27,6 +27,7 @@ object Message {
     var playerAlreadyInSameFaction = "&6%s &7is already in the same faction as you!"
     var playerIsAlreadyInFaction = "&6%s &7is already in a faction!"
 
+    var playerInviteBan = "&7You can't invite someone that is banned from the faction!"
     var playerInvited = "&7You have invited &6%s &7to the faction!"
     var playerNotificationInvited = "&7You have been invited by &6%s &7to &6%s&7! &o(( Click here ))"
 
@@ -34,8 +35,19 @@ object Message {
     var defaultRoleSet = "&7You have set the default faction role to &6%s&7!"
 
     var factionClosedNotInvited = "&7The faction &6%s &7is closed and you are not invited!"
+    var factionJoinBan = "&7You can't join &6%s &7since you are banned!"
     var factionJoined = "&7You have joined &6%s&7!"
     var factionJoinBroadcast = "&6%s &7has joined the faction!"
+
+    var factionNotSame = "&7You are not in the same faction as &6%s&7!"
+
+    var playerKicked = "&7You have kicked &6%s &7from the faction!"
+    var targetKicked = "&7You have been kicked from the faction by &6%s&7!"
+    var broadcastKick = "&6%s &7has been kicked from the faction by &6%s&7!"
+
+    var playerBan = "&7You have banned &6%s &7from the faction!"
+    var targetBan = "&7You have been banned from the faction by &6%s&7!"
+    var broadcastBan = "&6%s &7has been banned from the faction by &6%s&7!"
 
     var show = arrayListOf(
         "&8&l&m===========================================",

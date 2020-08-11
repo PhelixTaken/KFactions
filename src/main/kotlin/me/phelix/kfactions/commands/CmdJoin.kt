@@ -1,5 +1,6 @@
 package me.phelix.kfactions.commands
 
+import me.phelix.kfactions.FPlayer
 import me.phelix.kfactions.utils.Message
 
 class CmdJoin : SubCommand(arrayOf("join"), "<faction>", "Join a faction", false) {
@@ -15,6 +16,10 @@ class CmdJoin : SubCommand(arrayOf("join"), "<faction>", "Join a faction", false
                     it.args[0]
                 )
 
+                if(faction.bans.contains(it.fme.id))
+                    return@let it.fme.sendMessage(Message.factionJoinBan, faction.name)
+
+
                 if (!faction.open) {
 
                     //If faction is closed and the player has an invite
@@ -22,6 +27,7 @@ class CmdJoin : SubCommand(arrayOf("join"), "<faction>", "Join a faction", false
                         faction.addPlayer(it.fme)
                         it.fme.sendMessage(Message.factionJoined, it.args[0])
                         faction.broadCast(Message.factionJoinBroadcast, it.fme.getName())
+
                     }
                     //If the faction is closed and the player has no invite
                     else {
@@ -37,7 +43,6 @@ class CmdJoin : SubCommand(arrayOf("join"), "<faction>", "Join a faction", false
             } else {
                 it.fme.sendMessage(toString())
             }
-
         }
     }
 

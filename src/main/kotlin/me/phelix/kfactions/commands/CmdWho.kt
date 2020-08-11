@@ -4,6 +4,7 @@ import me.phelix.kfactions.FPlayer
 import me.phelix.kfactions.colorize
 import me.phelix.kfactions.utils.Config
 import me.phelix.kfactions.utils.Message
+import me.phelix.kfactions.utils.Role.*
 
 class CmdWho : SubCommand(arrayOf("who", "show"), "[faction]", "Shows the faction information", false) {
 
@@ -39,7 +40,14 @@ class CmdWho : SubCommand(arrayOf("who", "show"), "[faction]", "Shows the factio
 
         val players = mutableSetOf<String>()
         faction.players.forEach {
-            players.add(it.getName())
+            var name = ""
+            when (it.role) {
+                MODERATOR -> name += Config.moderatorPrefix
+                COLEADER -> name += Config.coleaderPrefix
+                LEADER -> name += Config.leaderPrefix
+            }
+            name += it.getName()
+            players.add(name)
         }
 
         val totalClaims = (faction.getTotalPower() / Config.factionClaimPower).toString()
@@ -66,5 +74,6 @@ class CmdWho : SubCommand(arrayOf("who", "show"), "[faction]", "Shows the factio
             sender.sendDefaultMessage(it.colorize())
         }
     }
+
 
 }

@@ -37,7 +37,7 @@ class KFactions : JavaPlugin() {
     }
 
     private fun load() {
-        val factions = File("$dataFolder${File.separator}KFactions", "players.json")
+        val factions = File("$dataFolder${File.separator}KFactions", "factions.json")
         val world = File("$dataFolder${File.separator}KFactions", "world.json")
         val message = File("$dataFolder${File.separator}KFactions", "messages.json")
         val config = File("$dataFolder${File.separator}KFactions", "config.json")
@@ -84,7 +84,7 @@ class KFactions : JavaPlugin() {
     }
 
     private fun save() {
-        val factions = File("$dataFolder${File.separator}KFactions", "players.json")
+        val factions = File("$dataFolder${File.separator}KFactions", "factions.json")
         val world = File("$dataFolder${File.separator}KFactions", "world.json")
         val message = File("$dataFolder${File.separator}KFactions", "messages.json")
         val config = File("$dataFolder${File.separator}KFactions", "config.json")

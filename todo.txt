@@ -16,7 +16,7 @@
 
 [x] Add a config file/class
 
-[] Test saving and loading
+[x] Test saving and loading
 
 [] Create a better way of loading and saving
 
@@ -41,8 +41,8 @@
     [x] Description
     [x] Default role
     [x] Invite
-    [] Join
-    [] Kick
+    [x] Join
+    [x] Kick
     [] Ban
     [] Disband
     [] Claim

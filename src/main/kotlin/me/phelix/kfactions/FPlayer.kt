@@ -6,10 +6,12 @@ import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.entity.Player
 import java.util.*
+import javax.annotation.Nullable
 
 class FPlayer(val id: String) {
 
-    @Transient lateinit var faction: Faction
+    @Transient
+    lateinit var faction: Faction
     lateinit var role: Role
 
     fun getUUID(): UUID = UUID.fromString(id)
@@ -25,5 +27,6 @@ class FPlayer(val id: String) {
     fun sendMessage(message: String, vararg objects: Any) = sendDefaultMessage("${Message.prefix} $message".colorize().format(*objects))
 
 }
+
 
 fun String.colorize() = ChatColor.translateAlternateColorCodes('&', this)

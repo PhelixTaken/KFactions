@@ -18,6 +18,10 @@ class CmdInvite : SubCommand(arrayOf("invite"), "<player>", "Invite a player to 
 
                 val target = it.playerHandler.getPlayer(targetPlayer)
 
+                if(it.myFaction.bans.contains(target!!.id))
+                    return@let it.fme.sendMessage(Message.playerInviteBan)
+
+
                 if(it.myFaction.players.contains(target))
                     return@let it.fme.sendMessage(Message.playerAlreadyInSameFaction, it.args[0])
 
