@@ -44,7 +44,7 @@
     [x] Join
     [x] Kick
     [x] Ban
-    [] Disband
+    [x] Disband
     [] Claim
     [] Unclaim
     [] Claim all

@@ -3,6 +3,7 @@ package me.phelix.kfactions.commands
 import me.phelix.kfactions.FPlayer
 import me.phelix.kfactions.utils.Message
 import me.phelix.kfactions.utils.permissions.Permission
+import org.bukkit.Bukkit
 import java.util.*
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -19,6 +20,12 @@ class CmdDisband : SubCommand(arrayOf("disband"), "[confirm]", "Disband your fac
                 if (!map.contains(it.fme)) {
                     it.fme.sendMessage(Message.disbandConfirmMessage)
                     map.add(it.fme)
+
+                    Bukkit.getServer().scheduler.scheduleSyncDelayedTask(it.plugin, {
+                        if (map.contains(it.fme))
+                            map.remove(it.fme)
+                    }, 1200)
+
                 } else {
                     return@let it.fme.sendMessage(Message.disbandAlreadyConfirm)
                 }
@@ -37,7 +44,6 @@ class CmdDisband : SubCommand(arrayOf("disband"), "[confirm]", "Disband your fac
                     it.factionHandler.map.remove(it.myFaction.name)
                 }
             }
-
         }
     }
 
