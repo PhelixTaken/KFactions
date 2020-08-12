@@ -1,6 +1,7 @@
 {
   "prefix": "&7[&6!&7]",
   "commandMapPrefix": "&m&l&8=======================< &r&6Map &r&m&l&8>=======================",
+  "playerNoPermission": "&7You are lacking the permission(s) &6%s&7!",
   "factionNeeded": "&7You must be in a faction to do that!",
   "alreadyInFaction": "&7You are already in a faction!",
   "factionNameLength": "&7The faction's name must have minimal &6%s &7characters and can have a maximum of &6%s &7characters!",

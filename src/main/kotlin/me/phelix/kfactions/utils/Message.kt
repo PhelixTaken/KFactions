@@ -10,6 +10,8 @@ object Message {
     var prefix = "&7[&6!&7]"
     var commandMapPrefix = "&m&l&8=======================< &r&6Map &r&m&l&8>======================="
 
+    var playerNoPermission = "&7You are lacking the permission(s) &6%s&7!"
+
     var factionNeeded = "&7You must be in a faction to do that!"
 
     var alreadyInFaction = "&7You are already in a faction!"

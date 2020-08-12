@@ -37,7 +37,6 @@ class CmdCreate : SubCommand(arrayOf("create"), "<name>", "Create a faction", fa
             it.factionHandler.map[it.args[0]] = faction
             it.fme.faction = faction
             it.fme.role = Role.LEADER
-            faction.factionPermission = FactionPermission()
             faction.factionPermission.setDefaultPermissions()
             faction.players.add(it.fme)
             it.fme.sendMessage(Message.factionCreated, it.args[0])!!

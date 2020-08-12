@@ -1,6 +1,7 @@
 package me.phelix.kfactions.commands
 
 import me.phelix.kfactions.KFactions
+import me.phelix.kfactions.utils.Message
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
@@ -26,17 +27,26 @@ class CommandHandler(private val plugin: KFactions) : CommandExecutor {
         if (cmd.name.equals("f", ignoreCase = true)) {
             if (args.isNotEmpty()) {
                 val subCommand = commands.find { args[0] in it.aliases } ?: return true
-                subCommand.execute(
-                    CommandContext(
-                        plugin,
-                        plugin.playerHandler,
-                        plugin.factionHandler,
-                        plugin.chunkHandler,
-                        plugin.playerHandler.getPlayer(sender)!!,
-                        plugin.playerHandler.getPlayer(sender)!!.faction,
-                        args.copyOfRange(1, args.size)
+                val player = plugin.playerHandler.getPlayer(sender)!!
+
+                if(subCommand.factionNeeded && !player.hasFaction()) {
+                    player.sendMessage(Message.factionNeeded)
+                    return true
+                }
+
+                if (subCommand.hasPermission(player)) {
+                    subCommand.execute(
+                        CommandContext(
+                            plugin,
+                            plugin.playerHandler,
+                            plugin.factionHandler,
+                            plugin.chunkHandler,
+                            player,
+                            player.faction,
+                            args.copyOfRange(1, args.size)
+                        )
                     )
-                )
+                }
             }
         }
         return true

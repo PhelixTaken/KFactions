@@ -16,7 +16,7 @@ class Faction(val name: String) {
 
     @Transient
     var invites = mutableSetOf<FPlayer>()
-    lateinit var factionPermission: FactionPermission
+    val factionPermission: FactionPermission = FactionPermission()
     var description = "Default faction description"
     var open = false
     var defaultRole = Role.RECRUIT

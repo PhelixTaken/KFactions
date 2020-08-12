@@ -1,6 +1,7 @@
 package me.phelix.kfactions.commands
 
 import me.phelix.kfactions.FPlayer
+import me.phelix.kfactions.utils.Message
 import me.phelix.kfactions.utils.permissions.Permission
 
 abstract class SubCommand(
@@ -14,11 +15,14 @@ abstract class SubCommand(
     abstract fun execute(commandContext: CommandContext)
 
     fun hasPermission(fme: FPlayer): Boolean {
-        if (factionNeeded && !fme.hasFaction()) return false
         if (permission.isEmpty()) return true
 
         permission.forEach {
-            if (!fme.faction.factionPermission.hasPermission(fme.role, it)) return false
+            if (!fme.faction.factionPermission.hasPermission(fme.role, it)) {
+                val permissions = permission.joinToString(", ").toLowerCase()
+                fme.sendMessage(Message.playerNoPermission, permissions)
+                return false
+            }
         }
 
         return true
