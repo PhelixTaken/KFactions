@@ -45,7 +45,7 @@
     [x] Kick
     [x] Ban
     [x] Disband
-    [] Claim
+    [x] Claim
     [] Unclaim
     [] Claim all
     [] Unclaim all

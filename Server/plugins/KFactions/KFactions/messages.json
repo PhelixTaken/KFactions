@@ -35,8 +35,12 @@
   "chunkClaimedBySelfFaction": "&7The chunk &6%s&7;&6%s &7has been already claimed by your faction!",
   "chunkClaimedByEnemy": "&7The chunk &6%s&7;&6%s &7has been already claimed by &6%s&7!",
   "chunkClaimPowerShortness": "&7You don't have enough power to claim this chunk!",
-  "chunkClaimed": "&You have claimed the chunk &6%s&7;&6%s&7!",
+  "chunkClaimed": "&7You have claimed the chunk &6%s&7;&6%s&7!",
   "chunkClaimBroadcast": "&7The chunk &6%s&7;&6%s&7 has been claimed by &6%s&7!",
+  "unclaimChunkNotClaimed": "&7The chunk &6%s&7;&6%s&7 hasn't been claimed by anyone!",
+  "unclaimChunkEnemy": "&7You can't unclaim enemy's faction!",
+  "unclaimChunk": "&7You have unclaimed the chunk &6%s&7;&6%s&7!",
+  "unclaimChunkBroadcast": "&7The chunk &6%s&7;&6%s&7 has been unclaimed by &6%s&7!",
   "show": [
     "&8&l&m===========================================",
     "&7Name » &6{faction_name}",

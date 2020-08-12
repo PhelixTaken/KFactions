@@ -39,14 +39,15 @@ class ChunkHandler(val main: KFactions) {
     }
 
     fun unclaimChunk(chunk: Chunk) {
-        map.remove(FLocation(chunk))
+        unclaimChunk(FLocation(chunk))
     }
 
     fun unclaimChunk(location: Location) {
-        map.remove(FLocation(location))
+        unclaimChunk(FLocation(location))
     }
 
     fun unclaimChunk(location: FLocation) {
+        getFactionFromChunk(location).claims.remove(location)
         map.remove(location)
     }
 

@@ -33,7 +33,7 @@ class Faction(val name: String) {
     fun getLeader(): FPlayer = players.stream().filter { fPlayer -> fPlayer.role == Role.LEADER }.findFirst().get()
 
     fun getPowerLeft(): Float =
-        (players.size * Config.factionPowerPerPlayer).toFloat() - (claims.size * Config.factionPowerPerPlayer).toFloat()
+        (players.size * Config.factionPowerPerPlayer).toFloat() - (claims.size * Config.factionClaimPower).toFloat()
 
     fun getPowerUsed(): Float = (players.size * Config.factionPowerPerPlayer).toFloat() - getPowerLeft()
 
