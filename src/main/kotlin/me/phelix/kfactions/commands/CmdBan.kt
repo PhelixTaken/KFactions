@@ -13,7 +13,7 @@ class CmdBan : SubCommand(arrayOf("ban"), "<player>", "Ban a player from the fac
                     it.args[0]
                 )
 
-                if (target.faction.equals(it.myFaction)) {
+                if (target.faction == it.myFaction) {
                     it.myFaction.removePlayer(target)
                     it.myFaction.bans.add(target.id)
                     target.faction = it.factionHandler.getWilderness()

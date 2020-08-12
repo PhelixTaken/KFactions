@@ -13,7 +13,7 @@ class CommandHandler(private val plugin: KFactions) : CommandExecutor {
         mutableSetOf(
             CmdCreate(), CmdWho(), CmdDescription(),
             CmdInvite(), CmdDefaultRole(), CmdJoin(), CmdKick(),
-            CmdDisband()
+            CmdDisband(), CmdClaim()
         )
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {

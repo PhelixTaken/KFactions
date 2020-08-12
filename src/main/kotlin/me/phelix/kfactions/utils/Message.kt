@@ -49,11 +49,17 @@ object Message {
     var targetBan = "&7You have been banned from the faction by &6%s&7!"
     var broadcastBan = "&6%s &7has been banned from the faction by &6%s&7!"
 
-    var disbandConfirmMessage = "&7Please confirm disbanding by doing &6/disband confirm&7! ( Cannot be undone! )"
-    var disbandAlreadyConfirm = "&7Please confirm disbanding by doing &6/disband confirm&7!"
+    var disbandConfirmMessage = "&7Please confirm disbanding by doing &6/f disband confirm&7! ( Cannot be undone! )"
+    var disbandAlreadyConfirm = "&7Please confirm disbanding by doing &6/f disband confirm&7!"
     var disbandNotConfirmed = "&7Please run &6/disband &7first!"
     var disbandSuccessfully = "&7You have disbanded &6%s&7!"
     var disbandBroadcast = "&6%s &7has been disbanded by &6%s&7!"
+
+    var chunkClaimedBySelfFaction = "&7The chunk &6%s&7;&6%s &7has been already claimed by your faction!"
+    var chunkClaimedByEnemy = "&7The chunk &6%s&7;&6%s &7has been already claimed by &6%s&7!"
+    var chunkClaimPowerShortness = "&7You don't have enough power to claim this chunk!"
+    var chunkClaimed = "&7You have claimed the chunk &6%s&7;&6%s&7!"
+    var chunkClaimBroadcast = "&7The chunk &6%s&7;&6%s&7 has been claimed by &6%s&7!"
 
     var show = arrayListOf(
         "&8&l&m===========================================",
