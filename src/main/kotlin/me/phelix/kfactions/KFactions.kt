@@ -68,8 +68,6 @@ class KFactions : JavaPlugin() {
                 faction.claims = mutableSetOf()
                 faction.invites = mutableSetOf()
 
-                faction.factionPermission.map.forEach(::println)
-
                 faction.players.forEach {
                     playerHandler.map[it.id] = it
                     it.faction = faction
