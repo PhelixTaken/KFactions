@@ -48,7 +48,7 @@
     [x] Claim
     [x] Unclaim
     //[] Claim all
-    [] Unclaim all
+    [x] Unclaim all
     [] Set warp
     [] Delete warp
     [] Warp
