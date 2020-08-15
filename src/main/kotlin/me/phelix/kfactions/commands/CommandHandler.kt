@@ -11,11 +11,12 @@ import org.bukkit.entity.Player
 class CommandHandler(private val plugin: KFactions) : CommandExecutor {
 
     private val commands =
-        mutableSetOf(
-            CmdCreate(), CmdWho(), CmdDescription(),
-            CmdInvite(), CmdDefaultRole(), CmdJoin(), CmdKick(),
-            CmdDisband(), CmdClaim(), CmdUnclaim(), CmdUnclaimAll()
-        )
+            mutableSetOf(
+                    CmdCreate(), CmdWho(), CmdDescription(),
+                    CmdInvite(), CmdDefaultRole(), CmdJoin(), CmdKick(),
+                    CmdDisband(), CmdClaim(), CmdUnclaim(), CmdUnclaimAll(),
+                    CmdSetwarp()
+            )
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
 
@@ -29,22 +30,22 @@ class CommandHandler(private val plugin: KFactions) : CommandExecutor {
                 val subCommand = commands.find { args[0] in it.aliases } ?: return true
                 val player = plugin.playerHandler.getPlayer(sender)!!
 
-                if(subCommand.factionNeeded && !player.hasFaction()) {
+                if (subCommand.factionNeeded && !player.hasFaction()) {
                     player.sendMessage(Message.factionNeeded)
                     return true
                 }
 
                 if (subCommand.hasPermission(player)) {
                     subCommand.execute(
-                        CommandContext(
-                            plugin,
-                            plugin.playerHandler,
-                            plugin.factionHandler,
-                            plugin.chunkHandler,
-                            player,
-                            player.faction,
-                            args.copyOfRange(1, args.size)
-                        )
+                            CommandContext(
+                                    plugin,
+                                    plugin.playerHandler,
+                                    plugin.factionHandler,
+                                    plugin.chunkHandler,
+                                    player,
+                                    player.faction,
+                                    args.copyOfRange(1, args.size)
+                            )
                     )
                 }
             }

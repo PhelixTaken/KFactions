@@ -72,6 +72,12 @@ object Message {
     var unclaimAll = "&7You have unclaimed all the chunks in the faction!"
     var unclaimAllBroadcast = "&6%s &7has unclaimed all the chunks in the faction!"
 
+    var setwarpHome = "&7To set home warp use &6/f sethome&7!"
+    var setwarpWithoutPassword = "&7You have set the warp &6%s&7 at &6%s&7;&6%s&7!"
+    var setwarpPasswordNotSame = "&7The password isn't the same as the confirmed password!"
+    var setwarpWithPassword = "&7You have set the warp &6%s&7 with the password &6%s&7!"
+    var setwarpConfirm = "&7Please confirm the password behind the first password!"
+
     var show = arrayListOf(
         "&8&l&m===========================================",
         "&7Name \u00BB &6{faction_name}",

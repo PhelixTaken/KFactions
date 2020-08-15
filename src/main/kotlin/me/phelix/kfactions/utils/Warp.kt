@@ -5,7 +5,7 @@ import org.bukkit.Bukkit
 import org.bukkit.Location
 import java.util.*
 
-class Warp(val name: String, val password: String? = null, val worldId: UUID, val x: Double, val y: Double, val z: Double) {
+class Warp(val name: String, val password: String?, val worldId: UUID, val x: Double, val y: Double, val z: Double) {
 
     fun hasPassword(): Boolean = password != null
 

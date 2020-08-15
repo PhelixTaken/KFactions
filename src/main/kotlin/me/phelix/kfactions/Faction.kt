@@ -3,6 +3,7 @@ package me.phelix.kfactions
 import me.phelix.kfactions.utils.Config
 import me.phelix.kfactions.utils.FLocation
 import me.phelix.kfactions.utils.Role
+import me.phelix.kfactions.utils.Warp
 import me.phelix.kfactions.utils.permissions.FactionPermission
 
 class Faction(val name: String) {
@@ -13,6 +14,8 @@ class Faction(val name: String) {
     val allies = mutableSetOf<String>()
     val enemies = mutableSetOf<String>()
     val bans = mutableSetOf<String>()
+    val warps = mutableMapOf<String, Warp>()
+    var home: Warp? = null
 
     @Transient
     var invites = mutableSetOf<FPlayer>()
