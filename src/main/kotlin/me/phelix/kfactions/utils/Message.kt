@@ -68,6 +68,10 @@ object Message {
     var unclaimChunk = "&7You have unclaimed the chunk &6%s&7;&6%s&7!"
     var unclaimChunkBroadcast = "&7The chunk &6%s&7;&6%s&7 has been unclaimed by &6%s&7!"
 
+    var unclaimAllNone = "&7Your faction has no claims to unclaim!"
+    var unclaimAll = "&7You have unclaimed all the chunks in the faction!"
+    var unclaimAllBroadcast = "&6%s &7has unclaimed all the chunks in the faction!"
+
     var show = arrayListOf(
         "&8&l&m===========================================",
         "&7Name \u00BB &6{faction_name}",

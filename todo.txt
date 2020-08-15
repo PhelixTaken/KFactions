@@ -46,8 +46,8 @@
     [x] Ban
     [x] Disband
     [x] Claim
-    [] Unclaim
-    [] Claim all
+    [x] Unclaim
+    //[] Claim all
     [] Unclaim all
     [] Set warp
     [] Delete warp

@@ -21,7 +21,7 @@ class CmdDisband : SubCommand(arrayOf("disband"), "[confirm]", "Disband your fac
                     it.fme.sendMessage(Message.disbandConfirmMessage)
                     map.add(it.fme)
 
-                    Bukkit.getServer().scheduler.scheduleSyncDelayedTask(it.plugin, {
+                    return@let Bukkit.getServer().scheduler.scheduleSyncDelayedTask(it.plugin, {
                         if (map.contains(it.fme))
                             map.remove(it.fme)
                     }, 1200)

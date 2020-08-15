@@ -25,7 +25,7 @@ class CmdInvite : SubCommand(arrayOf("invite"), "<player>", "Invite a player to 
                 if(it.myFaction.players.contains(target))
                     return@let it.fme.sendMessage(Message.playerAlreadyInSameFaction, it.args[0])
 
-                if(target!!.hasFaction())
+                if(target.hasFaction())
                     return@let it.fme.sendMessage(Message.playerIsAlreadyInFaction, it.args[0])
 
                 val component = TextComponent()

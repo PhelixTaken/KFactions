@@ -19,6 +19,6 @@ dependencies {
 
 tasks.jar {
     archiveFileName.set("${project.name}-${project.version}.jar")
-    destinationDirectory.set(file("${File.separator}Server${File.separator}plugins"))
+    destinationDirectory.set(file(".${File.separator}Server${File.separator}plugins"))
     from(configurations["runtimeClasspath"].map(::zipTree))
 }
