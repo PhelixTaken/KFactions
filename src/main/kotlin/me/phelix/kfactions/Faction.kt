@@ -44,4 +44,6 @@ class Faction(val name: String) {
 
     fun broadCast(message: String, vararg objects: Any) = players.forEach { if(it.getPlayer() != null) it.sendMessage(message, *objects) }
 
+    fun getWarp(name: String): Warp? = warps[name]
+
 }

@@ -78,6 +78,11 @@ object Message {
     var setwarpWithPassword = "&7You have set the warp &6%s&7 with the password &6%s&7!"
     var setwarpConfirm = "&7Please confirm the password behind the first password!"
 
+    var deleteWarpNotExist = "&7The warp &6%s &7does not exist!"
+    var deleteWarpPasswordNeeded = "&7You need to confirm with the password of the warp &6%s&7!"
+    var deleteWarpPasswordNotMatch = "&7The password of the warp &6%s &7doesn't match!"
+    var deleteWarp = "&7Deleted the warp &6%s&7!"
+
     var show = arrayListOf(
         "&8&l&m===========================================",
         "&7Name \u00BB &6{faction_name}",

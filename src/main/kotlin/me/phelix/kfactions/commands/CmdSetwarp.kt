@@ -9,7 +9,7 @@ class CmdSetwarp : SubCommand(arrayOf("setwarp"), "<name> [password] [confirmPas
     override fun execute(commandContext: CommandContext) {
         commandContext.let {
 
-            if (it.args.size in 1..2) {
+            if (it.args.size in 1..3) {
                 val name = it.args[0]
 
                 if (name.equals("home", ignoreCase = true))
@@ -30,7 +30,7 @@ class CmdSetwarp : SubCommand(arrayOf("setwarp"), "<name> [password] [confirmPas
                     // If password and confirmPassword exists
                     if (password != null && confirmPassword != null) {
                         if (password != confirmPassword) { // If password and confirm password ain't the same
-                            it.fme.sendMessage(Message.setwarpPasswordNotSame)
+                            return@let it.fme.sendMessage(Message.setwarpPasswordNotSame)
                         } else { // If they are the same
                             val warp = Warp(name, password, location.world.uid, location.x, location.y, location.z)
                             it.myFaction.warps[name] = warp

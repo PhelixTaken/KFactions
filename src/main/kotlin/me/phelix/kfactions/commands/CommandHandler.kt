@@ -15,7 +15,7 @@ class CommandHandler(private val plugin: KFactions) : CommandExecutor {
                     CmdCreate(), CmdWho(), CmdDescription(),
                     CmdInvite(), CmdDefaultRole(), CmdJoin(), CmdKick(),
                     CmdDisband(), CmdClaim(), CmdUnclaim(), CmdUnclaimAll(),
-                    CmdSetwarp()
+                    CmdSetwarp(), CmdDeleteWarp()
             )
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
