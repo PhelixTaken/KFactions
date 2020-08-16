@@ -19,10 +19,10 @@ class CmdSetwarp : SubCommand(arrayOf("setwarp"), "<name> [password] [confirmPas
                     var password: String? = null
                     var confirmPassword: String? = null
 
-                    if (it.args.size == 2)
+                    if (it.args.size > 1)
                         password = it.args[1]
 
-                    if (it.args.size == 3)
+                    if (it.args.size > 2)
                         confirmPassword = it.args[2]
 
                     val location = it.fme.getPlayer()!!.location

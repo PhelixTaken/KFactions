@@ -50,6 +50,10 @@
   "setwarpPasswordNotSame": "&7The password isn't the same as the confirmed password!",
   "setwarpWithPassword": "&7You have set the warp &6%s&7 with the password &6%s&7!",
   "setwarpConfirm": "&7Please confirm the password behind the first password!",
+  "deleteWarpNotExist": "&7The warp &6%s &7does not exist!",
+  "deleteWarpPasswordNeeded": "&7You need to confirm with the password of the warp &6%s&7!",
+  "deleteWarpPasswordNotMatch": "&7The password of the warp &6%s &7doesn't match!",
+  "deleteWarp": "&7Deleted the warp &6%s&7!",
   "show": [
     "&8&l&m===========================================",
     "&7Name » &6{faction_name}",
