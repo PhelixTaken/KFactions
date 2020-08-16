@@ -15,7 +15,7 @@ class CommandHandler(private val plugin: KFactions) : CommandExecutor {
                     CmdCreate(), CmdWho(), CmdDescription(),
                     CmdInvite(), CmdDefaultRole(), CmdJoin(), CmdKick(),
                     CmdDisband(), CmdClaim(), CmdUnclaim(), CmdUnclaimAll(),
-                    CmdSetwarp(), CmdDeleteWarp()
+                    CmdSetwarp(), CmdDeleteWarp(), CmdVersion()
             )
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
@@ -27,7 +27,7 @@ class CommandHandler(private val plugin: KFactions) : CommandExecutor {
 
         if (cmd.name.equals("f", ignoreCase = true)) {
             if (args.isNotEmpty()) {
-                val subCommand = commands.find { args[0] in it.aliases } ?: return true
+                val subCommand = commands.find { args[0].toLowerCase() in it.aliases } ?: return true
                 val player = plugin.playerHandler.getPlayer(sender)!!
 
                 if (subCommand.factionNeeded && !player.hasFaction()) {

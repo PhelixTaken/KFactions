@@ -50,6 +50,7 @@
     //[] Claim all
     [x] Unclaim all
     [x] Set warp
+    [] Faction version
     [] Delete warp
     [] Warp
     [] Warp list
